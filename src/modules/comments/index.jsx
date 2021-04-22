@@ -7,7 +7,7 @@ import ReactMarkdown from "react-markdown";
 import MarkdownGithub from "react-markdown-github";
 import { getIssueByNumber } from "../issues/issueSlice";
 import { getComments } from "./commentsSlice";
-import RepoCard from "../../components/comment-card";
+import CommentCard from "../../components/comment-card";
 
 class Comments extends React.Component {
   constructor(props) {
@@ -52,9 +52,10 @@ class Comments extends React.Component {
             {this.props.comments.status === "success" ? (
               this.props.comments.data.map((comment) => (
                 <>
-                  <div style={{ background: "grey", marginBottom: "20px" }}>
-                    <MarkdownGithub source={comment.body} />
-                  </div>
+                  
+                  <CommentCard comment={comment} key={comment.id} />
+                    
+                  
                 </>
               ))
             ) : (
