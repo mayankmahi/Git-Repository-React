@@ -3,7 +3,7 @@ import { Container, Row, Spinner } from "react-bootstrap";
 import { connect } from "react-redux";
 
 import { withRouter } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
 import MarkdownGithub from "react-markdown-github";
 import { getIssueByNumber } from "../issues/issueSlice";
 import { getComments } from "./commentsSlice";
